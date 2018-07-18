@@ -1,0 +1,9 @@
+<div class="repo-item" *ngIf="repo">
+  <h3 class="name"><a href="{{ repo.url }}">{{ number }}. {{ repo.name }}</a></h3>
+  <div class="repo-id">Repository ID: {{ repo.repository_id }}</div>
+  <p class="description">{{ repo.description }}</p>
+  <div class="created-date">Created at {{ repo.created_date }}</div>
+  <div class="last-pushed-date">Updated {{ repo.last_pushed_date }}</div>
+  <div class="stars"><i class="fa fa-star"></i> {{ repo.stars }}</div>
+  <div class="url"><a href="{{ repo.url }}"><i class="fa fa-link"></i> {{ repo.url }}</a></div>
+</div>

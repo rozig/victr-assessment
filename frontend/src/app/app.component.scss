@@ -1,0 +1,107 @@
+.container {
+  overflow:hidden;
+  padding:30px;
+  margin:auto;
+  width:768px;
+  .title {
+    text-align:center;
+  }
+  .meta {
+    font-size:20px;
+    padding:10px 0;
+  }
+  .repo-list {
+    border-bottom:1px solid #e1e4e8;
+    border-top:1px solid #e1e4e8;
+    width:100%;
+  }
+  .pagination {
+    padding:50px 0 30px 0;
+    text-align:center;
+    position:relative;
+    display:block;
+    margin:0 auto;
+    .pager {
+      border:1px solid #e1e4e8;
+      text-decoration:none;
+      display:inline-block;
+      text-align:center;
+      font-weight:bold;
+      line-height:36px;
+      cursor:pointer;
+      min-width:36px;
+      font-size:13px;
+      padding:0 10px;
+      color:#0366d6;
+      height:36px;
+      &.info, &.disabled {
+        cursor:default;
+        color:#586069;
+      }
+      &:first-child {
+        border-bottom-left-radius:3px;
+        border-top-left-radius:3px;
+      }
+      &:last-child {
+        border-bottom-right-radius:3px;
+        border-top-right-radius:3px;
+      }
+      &:not(:last-child) {
+        border-right:none;
+      }
+    }
+  }
+}
+.loading {
+  background-color:white;
+  position:absolute;
+  height:100%;
+  width:100%;
+  left:0;
+  top:0;
+  .spinner {
+    -webkit-animation:sk-scaleout 1.0s infinite ease-in-out;
+    animation:sk-scaleout 1.0s infinite ease-in-out;
+    background-color:#0366d6;
+    border-radius:100%;
+    position:absolute;
+    margin-left:-20px;
+    margin-top:-20px;
+    height:40px;
+    width:40px;
+    left:50%;
+    top:50%;
+  }
+}
+
+@-webkit-keyframes sk-scaleout {
+  0% { -webkit-transform: scale(0) }
+  100% {
+    -webkit-transform: scale(1.0);
+    opacity: 0;
+  }
+}
+
+@keyframes sk-scaleout {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  } 100% {
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+    opacity: 0;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    width:100%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .container {
+    padding:20px 0;
+    .meta { padding:10px; }
+  }
+}

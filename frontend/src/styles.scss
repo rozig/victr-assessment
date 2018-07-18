@@ -1,0 +1,33 @@
+html, body {
+  font-family:Helvetica, sans-serif;
+  overflow:hidden;
+  color:#24292e;
+  height:100%;
+  width:100%;
+  padding:0;
+  margin:0;
+}
+
+body {
+  app {
+    overflow:hidden;
+    display:block;
+    height:100%;
+    width:100%;
+    padding:0;
+    margin:0;
+    overflow-y:scroll;
+  }
+}
+
+*, ::after, ::before {
+  box-sizing:border-box;
+}
+
+a {
+  text-decoration:none;
+  color:#0366d6;
+  &:hover {
+    text-decoration:underline;
+  }
+}

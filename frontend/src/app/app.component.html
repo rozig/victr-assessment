@@ -1,0 +1,15 @@
+<div class="container">
+  <h1 class="title">Popular Python Repositories on Github</h1>
+  <div class="meta" *ngIf="isLoaded === 'active'">Total of {{ total }} repositories</div>
+  <div class="repo-list" *ngIf="isLoaded === 'active'">
+    <repository *ngFor="let repo of repositories; let i = index" [repo]="repo" [number]="((current - 1) * 10) + i + 1"></repository>
+  </div>
+  <div class="pagination" *ngIf="isLoaded === 'active'">
+    <span class="pager" [class.disabled]="current <= 1" (click)="current > 1 && navigate(current - 1)">Prev</span>
+    <span class="pager info">Page {{ current }} of {{ totalPages }}</span>
+    <span class="pager" [class.disabled]="current >= totalPages" (click)="current < totalPages && navigate(current + 1)">Next</span>
+  </div>
+</div>
+<div class="loading" [@loaderState]="isLoaded">
+  <div class="spinner"></div>
+</div>

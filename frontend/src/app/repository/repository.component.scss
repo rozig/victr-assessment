@@ -1,0 +1,51 @@
+.repo-item {
+  border-bottom:1px solid #e1e4e8;
+  position:relative;
+  padding:20px 10px;
+  width:100%;
+  padding-right:160px;
+  .name {
+    font-weight:bold;
+    font-size:20px;
+    margin:0;
+  }
+  .repo-id {
+    font-size:12px;
+    padding:5px 0;
+    color:#586069;
+  }
+  .description, .last-pushed-date, .stars, .created-date, .url {
+    font-size:14px;
+    color:#586069;
+  }
+  .last-pushed-date, .created-date { font-size:13px; }
+  .description {
+    padding:10px 0;
+    margin:0;
+  }
+  .stars, .created-date {
+    position:absolute;
+    right:25px;
+  }
+  .stars { top:58px; }
+  .created-date { top:105px; }
+  .url {
+    padding-top:10px;
+    color:#0366d6;
+  }
+  &:last-child { border-bottom:none; }
+}
+
+@media only screen and (max-width: 768px) {
+  .repo-item {
+    padding-right:10px;
+    .stars, .created-date {
+      position:relative;
+      right:unset;
+      top:unset;
+    }
+    .last-pushed-date {
+      padding:10px 0;
+    }
+  }
+}

@@ -15,9 +15,13 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+from django.views.generic import RedirectView
+from django.contrib.staticfiles.views import serve
 
 
 urlpatterns = [
+    url(r'^$', serve, kwargs={'path': 'frontend/index.html'}),
+    url(r'^(?!/?static/)(?!/?media/)(?P<path>.*\..*)$', RedirectView.as_view(url='/static/frontend/%(path)s', permanent=False)),
     url(r'^api/github/', include('github.urls')),
     url(r'^admin/', admin.site.urls),
 ]
