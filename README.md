@@ -11,7 +11,7 @@ In the frontend I used Angular framework to display data from API.
 
 > **Note:** Github search API provides up to 1000 results. You can get more information at [Github API](https://developer.github.com/v3/search/).
 
-You can see live demo by [clicking here](http://104.196.184.228/).
+I deployed this project on Google Cloud Compute Engine for demo purpose. You can see live demo by [clicking here](http://104.196.184.228/).
 
 ## Requirements
 1. git
