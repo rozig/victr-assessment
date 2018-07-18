@@ -1,4 +1,4 @@
 Django==1.11
 request
 djangorestframework==3.8.2
-django-cors-header==2.3.0
+django-cors-header
