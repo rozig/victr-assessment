@@ -10,13 +10,13 @@ class Command(BaseCommand):
     api_url = 'https://api.github.com/search/repositories?q=language:python&sort=stars&order=desc&per_page=100'
 
     def handle(self, *args, **options):
-        self.stdout.write(self.style.WARNING('Retrieving data ...'))
+        self.stdout.write(self.style.SUCCESS('Retrieving data ...'))
         self.retrieve_data()
-        self.stdout.write(self.style.WARNING('Retrieved!'))
-        self.stdout.write(self.style.WARNING('Removing old data ...'))
+        self.stdout.write(self.style.SUCCESS('Retrieved!'))
+        self.stdout.write(self.style.SUCCESS('Removing old data ...'))
         Project.objects.all().delete()
-        self.stdout.write(self.style.WARNING('Removed!'))
-        self.stdout.write(self.style.WARNING('Inserting new data ...'))
+        self.stdout.write(self.style.SUCCESS('Removed!'))
+        self.stdout.write(self.style.SUCCESS('Inserting new data ...'))
         Project.objects.bulk_create(self.project_list)
         self.stdout.write(self.style.SUCCESS('Finished!'))
 
