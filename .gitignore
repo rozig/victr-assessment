@@ -70,3 +70,16 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+
+# Editor
+*.sublime-project
+*.sublime-workspace
+.idea
+*.iml
+.vscode
+*.swp
+*.swo
+
+# OS
+.DS_STORE
+Thumbs.db
